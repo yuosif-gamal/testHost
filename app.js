@@ -10,6 +10,8 @@ const itemList = {
     Friska: 1.8,
     chips: 1.2,
     Pepsi: 1.5,
+
+    // hello
     // Add more items as needed
 };
 
