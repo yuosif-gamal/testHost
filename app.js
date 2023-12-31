@@ -2,16 +2,18 @@
 
 // Item list with prices
 const itemList = {
-    Tea: 1.0,
-    Coffee: 2.5,
-    Sandwich: 3.0,
-    Molto: 1.5,
-    Biscuits: 2.0,
-    Friska: 1.8,
-    chips: 1.2,
-    Pepsi: 1.5,
+    Citizen_Tea: 10.0,
+    Coffee: 6.0,
+    Tea: 3.0,
+    Citizen_Coffee: 15.0,
+    Sandwich: 20.0,
+    Molto: 11.0,
+    Small_Biscuits: 4.0,
+    Big_Biscuits: 6.0,
+    Small_Chips: 8.0,
+    Big_Chips: 10.0,
+    Pepsi: 10.0,
 
-    // hello
     // Add more items as needed
 };
 
@@ -48,6 +50,12 @@ function removeItem(index) {
 // Function to complete the purchase
 function completePurchase() {
     // Calculate the total price
+    if (cart.length === 0) {
+        // Display an alert if the cart is empty
+        alert('Cannot complete purchase. Shopping cart is empty.');
+        return;
+    }
+
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
     // Display a simple completion message

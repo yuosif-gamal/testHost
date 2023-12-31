@@ -35,6 +35,12 @@ h1, h2 {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: #2980b9;
 }
 
 #cart {
@@ -48,6 +54,9 @@ h1, h2 {
 
 #cart-items li {
     margin-bottom: 5px;
+    padding: 5px;
+    background-color: #ecf0f1;
+    border-radius: 3px;
 }
 
 button {
@@ -59,6 +68,7 @@ button {
     font-size: 16px;
     margin-top: 10px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {

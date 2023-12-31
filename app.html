@@ -7,41 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="app">
-        <h1>Cafeteria App</h1>
-        <div id="menu">
-            <!-- Add more buttons for additional supermarket items -->
-<button class="item" onclick="addItem('Tea', 1.0)">Tea - $1.0</button>
-<button class="item" onclick="addItem('Coffee', 2.5)">Coffee - $2.5</button>
-<button class="item" onclick="addItem('Sandwich', 3.0)">Sandwich - $3.0</button>
-<button class="item" onclick="addItem('Molto', 1.5)">Molto - $1.5</button>
-<button class="item" onclick="addItem('Biscuits', 2.0)">Biscuits - $2.0</button>
-<button class="item" onclick="addItem('Friska', 1.8)">Friska - $1.8</button>
-<button class="item" onclick="addItem('Chips', 1.2)">Chips - $1.2</button>
-<button class="item" onclick="addItem('Pepsi', 1.5)">Pepsi - $1.5</button>
+<div id="app">
+    <h1>Cafeteria App</h1>
+    <div id="menu">
+        <!-- Add more buttons for additional supermarket items -->
+        <button class="item" onclick="addItem('Tea', 3.0)">Tea - $3.0</button>
+        <button class="item" onclick="addItem('Coffee', 6.0)">Coffee - $6.0</button>
+        <button class="item" onclick="addItem('Citizen_Tea', 10.0)">Citizen_Tea - $10.0</button>
+        <button class="item" onclick="addItem('Citizen_Coffee', 15.0)">Citizen_Coffee - $15.0</button>
+        <button class="item" onclick="addItem('Sandwich', 20.0)">Sandwich - $20.0</button>
+        <button class="item" onclick="addItem('Pepsi', 10.0)">Pepsi - $10.0</button>
+        <button class="item" onclick="addItem('Molto', 11.0)">Molto - $11.0</button>
+        <button class="item" onclick="addItem('Big_Biscuits', 6.0)">Big_Biscuits - $6.0</button>
+        <button class="item" onclick="addItem('Small_Biscuits', 4.0)">Small_Biscuits - $4.0</button>
+        <button class="item" onclick="addItem('Small_Chips', 8.0)">Small_Chips - $8.0</button>
+        <button class="item" onclick="addItem('Large_Chips', 10.0)">Large_Chips - $10.0</button>
 
-        </div>
-        <div id="cart">
-            <h2>Shopping Cart</h2>
-            <ul id="cart-items"></ul>
-            <p>Total: $<span id="total">0.00</span></p>
-            <button onclick="generateReport()">Generate Report</button>
-            <button onclick="completePurchase()">Done</button>
-        </div>
-        <div id="report">
-            <h2>Report</h2>
-            <table id="report-table">
-                <thead>
-                    <tr>
-                        <th>Purchase</th>
-                        <th>Items</th>
-                        <th>Total Price</th>
-                    </tr>
-                </thead>
-                <tbody id="report-content"></tbody>
-            </table>
-        </div>
     </div>
-    <script src="app.js"></script>
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0.00</span></p>
+        <button onclick="generateReport()">Generate Report</button>
+        <button onclick="completePurchase()">Done</button>
+    </div>
+    <div id="report">
+        <h2>Report</h2>
+        <table id="report-table">
+            <thead>
+            <tr>
+                <th>Purchase</th>
+                <th>Items</th>
+                <th>Total Price</th>
+            </tr>
+            </thead>
+            <tbody id="report-content"></tbody>
+        </table>
+    </div>
+</div>
+<!-- Add these script tags to your HTML file -->
+<script src="app.js"></script>
+
+
 </body>
 </html>
