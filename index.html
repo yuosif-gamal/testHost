@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteria App</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.0/html2pdf.bundle.js"></script>
+    <script src="path/to/html2pdf.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
 </head>
 <body>
 <div id="app">
@@ -47,9 +52,14 @@
             </thead>
             <tbody id="report-content"></tbody>
         </table>
+
+
+        <button id="download" onclick="generateFinalReport()">Download Final Report</button>
+
     </div>
 </div>
-<!-- Add these script tags to your HTML file -->
+
+
 <script src="app.js"></script>
 
 

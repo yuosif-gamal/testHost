@@ -100,8 +100,6 @@ function updateTotal() {
     totalElement.textContent = totalPrice.toFixed(2);
 }
 
-// Function to generate a report
-// Function to generate a report
 function generateReport() {
     // Get the report content element
     const reportContentElement = document.getElementById('report-content');
@@ -159,3 +157,31 @@ function generateReport() {
     overallTotalRow.appendChild(overallTotalCell);
     reportContentElement.appendChild(overallTotalRow);
 }
+// app.js
+// ... (your existing code)
+
+// Function to send the final report as a PDF using html2pdf
+// Function to generate the final report in PDF
+function generateFinalReport() {
+    // Get the report content element
+    const reportContentElement = document.getElementById('report-content');
+
+    // Ensure the content is not empty
+    if (!reportContentElement.innerHTML.trim()) {
+        alert('No report to generate. Please create a report first.');
+        return;
+    }
+
+    // Set the options for html2pdf
+    const options = {
+        margin: 10,
+        filename: 'final_report.pdf',
+        image: {type: 'jpeg', quality: 0.98},
+        html2canvas: {scale: 2},
+        jsPDF: {unit: 'mm', format: 'a4', orientation: 'portrait'}
+    };
+
+    // Use html2pdf to generate PDF
+    html2pdf().from(reportContentElement).set(options).save();
+}
+// Function to generate the final report in PDF
