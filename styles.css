@@ -8,6 +8,7 @@ body {
 }
 
 #app {
+    width: 100%;
     max-width: 600px;
     margin: 20px auto;
     background-color: #fff;
@@ -29,6 +30,7 @@ h1, h2 {
 }
 
 .item {
+    flex: 0 0 calc(50% - 10px);
     background-color: #3498db;
     color: #fff;
     padding: 10px;
@@ -37,6 +39,7 @@ h1, h2 {
     font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-bottom: 10px;
 }
 
 .item:hover {
@@ -60,6 +63,7 @@ h1, h2 {
 }
 
 button {
+    width: 100%;
     background-color: #2ecc71;
     color: #fff;
     padding: 10px;
