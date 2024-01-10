@@ -1,21 +1,3 @@
-// app.js
-
-// Item list with prices
-const itemList = {
-    Citizen_Tea: 10.0,
-    Coffee: 6.0,
-    Tea: 3.0,
-    Citizen_Coffee: 15.0,
-    Sandwich: 20.0,
-    Molto: 11.0,
-    Small_Biscuits: 4.0,
-    Big_Biscuits: 6.0,
-    Small_Chips: 8.0,
-    Big_Chips: 10.0,
-    Pepsi: 10.0,
-
-    // Add more items as needed
-};
 
 // Cart to store selected items
 const cart = [];
@@ -82,10 +64,10 @@ function displayCart() {
     cart.forEach((item, index) => {
         const listItem = document.createElement('li');
         listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-        
+
         // Add a remove button
         const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
+        removeButton.textContent = 'مسح المنتج';
         removeButton.onclick = () => removeItem(index);
 
         listItem.appendChild(removeButton);
@@ -157,13 +139,7 @@ function generateReport() {
     overallTotalRow.appendChild(overallTotalCell);
     reportContentElement.appendChild(overallTotalRow);
 }
-// app.js
-// ... (your existing code)
-
-// Function to send the final report as a PDF using html2pdf
-// Function to generate the final report in PDF
 function generateFinalReport() {
-    // Get the report content element
     const reportContentElement = document.getElementById('report-content');
 
     // Ensure the content is not empty
@@ -171,11 +147,12 @@ function generateFinalReport() {
         alert('No report to generate. Please create a report first.');
         return;
     }
+    const currentDate = new Date();
+    const dateString = currentDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
 
-    // Set the options for html2pdf
     const options = {
         margin: 10,
-        filename: 'final_report.pdf',
+        filename: `تقرير_${dateString}.pdf`, // Set filename with the current date
         image: {type: 'jpeg', quality: 0.98},
         html2canvas: {scale: 2},
         jsPDF: {unit: 'mm', format: 'a4', orientation: 'portrait'}
