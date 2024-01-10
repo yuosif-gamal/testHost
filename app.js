@@ -139,7 +139,13 @@ function generateReport() {
     overallTotalRow.appendChild(overallTotalCell);
     reportContentElement.appendChild(overallTotalRow);
 }
+// app.js
+// ... (your existing code)
+
+// Function to send the final report as a PDF using html2pdf
+// Function to generate the final report in PDF
 function generateFinalReport() {
+    // Get the report content element
     const reportContentElement = document.getElementById('report-content');
 
     // Ensure the content is not empty
@@ -150,6 +156,7 @@ function generateFinalReport() {
     const currentDate = new Date();
     const dateString = currentDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
 
+    // Set the options for html2pdf
     const options = {
         margin: 10,
         filename: `تقرير_${dateString}.pdf`, // Set filename with the current date

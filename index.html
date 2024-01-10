@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteria App</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.0/html2pdf.bundle.js"></script>
+    <script src="path/to/html2pdf.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
 
 </head>
 <body>
@@ -21,15 +23,15 @@
         <button class="item" onclick="addItem('ساندويتش', 20.0)">ساندويتش - $20.0</button>
         <button class="item" onclick="addItem('بيبسي', 10.0)">بيبسي - $10.0</button>
         <button class="item" onclick="addItem('مولتو', 11.0)">مولتو - $11.0</button>
-        <button class="item" onclick="addItem('مولتو', 15.0)">باتيه - $15.0</button>
         <button class="item" onclick="addItem('بسكوت كبير', 6.0)">بسكوت كبير - $6.0</button>
         <button class="item" onclick="addItem('بسكوت صغير', 4.0)">بسكوت صغير - $4.0</button>
         <button class="item" onclick="addItem('شيبسي صغير', 8.0)">شيبسي صغير- $8.0</button>
         <button class="item" onclick="addItem('شيبسي كبير', 10.0)">شيبسي كبير - $10.0</button>
         <button class="item" onclick="addItem('كيكه كبير', 6.0)">كيكه كبير - $6.0</button>
         <button class="item" onclick="addItem('كيكه صغير', 4.0)">كيكه صغير - $4.0</button>
-        <button class="item" onclick="addItem('مياه صغير', 7.0)">مياه صغير - $7.0</button>
+        <button class="item" onclick="addItem(' مياه', 7.0)"> مياه - $7.0</button>
         <button class="item" onclick="addItem('عصير ', 10.0)">عصير  - $10.0</button>
+        <button class="item" onclick="addItem('باتيه كبير ', 15.0)">باتيه كبير - $15.0</button>
 
     </div>
     <div id="cart">
@@ -55,7 +57,7 @@
         </table>
 
 
-        <button onclick="generateFinalReport()">تحميل التقرير النهائي</button>
+        <button id="download" onclick="generateFinalReport()">تحميل التقرير النهائي</button>
 
     </div>
 </div>
